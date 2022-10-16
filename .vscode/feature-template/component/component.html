@@ -1,0 +1,10 @@
+<div *ngIf="page$ |async as page" class="wrap">
+    Feature generator: app-{{kebab-name}} component
+    <pre> {{page |json}} </pre>
+</div>
+
+<div *ngIf="inProgress$ |async" [style.color]="'yellow'"> IN PROGRESS ... </div>
+
+<div *ngIf="error$ |async as error" [style.color]="'red'">
+    <pre> {{error |json}} </pre>
+</div>
